@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Pomodoro Clock</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<main>
+        <h1>Pomodoro Clock</h1>
+        <section class="clock-controls">
+            <div class="break-time-control">
+                <h2>Break Time</h2>
+                <div class="btn-container">
+                    <button type="button" class="left-border control-btns black" onclick="updateCounter('break-time', -1)">-</button>
+                    <input id="break-time" type="text" value="5">
+                    <button type="button" class="right-border control-btns black" onclick="updateCounter('break-time', 1)">+</button>
+                </div>
+            </div>
+            <div>
+                <h2>Music</h2>
+                <i id="music" class="fa fa-volume-up fa-3x" aria-hidden="true"></i>
+            </div>
+            <div class="session-time-control">
+                <h2>Session Time</h2>
+                <div class="btn-container">
+                    <button type="button" class="left-border control-btns black" onclick="updateCounter('session-time', -1)">-</button>
+                    <input id="session-time" type="text" value="25">
+                    <button type="button" class="right-border control-btns black" onclick="updateCounter('session-time', 1)">+</button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div id="clock-container">
+                <h1 id="clock">25:00</h1>
+                <p id="status">Time to Work</p>
+            </div>
+            <audio id="audio">
+                <source src="https://rawgit.com/nawazishali/pomodoro-clock/master/music1.mp3" type="audio/mpeg"></source>
+            </audio>
+            <div id="master-btns">
+                <button type="button" class="black" id="timer-toggle">Start Timer</button>
+                <button type="button" class="black" id="timer-reset">Reset</button>
+            </div>
+        </section>
+    </main>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
